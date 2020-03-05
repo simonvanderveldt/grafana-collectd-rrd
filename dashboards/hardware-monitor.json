@@ -332,6 +332,12 @@
           "refId": "B",
           "target": "localhost:sensors-nct6779-isa-*:temperature-*:value",
           "type": "timeserie"
+        },
+        {
+          "rawQuery": true,
+          "refId": "C",
+          "target": "localhost:sensors-BAT0-*:temperature-*:value",
+          "type": "timeserie"
         }
       ],
       "thresholds": [],
