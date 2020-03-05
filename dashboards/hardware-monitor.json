@@ -15,7 +15,6 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 1,
   "links": [],
   "panels": [
     {
@@ -237,7 +236,7 @@
         {
           "rawQuery": true,
           "refId": "A",
-          "target": "localhost:sensors-coretemp-isa-0000:temperature-*:value",
+          "target": "localhost:sensors-coretemp-isa-*:temperature-*:value",
           "type": "timeserie"
         }
       ],
@@ -245,7 +244,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "CPU temp",
+      "title": "CPU temperature",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -297,6 +296,100 @@
         "y": 24
       },
       "hiddenSeries": false,
+      "id": 12,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "rawQuery": true,
+          "refId": "A",
+          "target": "localhost:sensors-amdgpu-pci-*:temperature-*:value",
+          "type": "timeserie"
+        },
+        {
+          "rawQuery": true,
+          "refId": "B",
+          "target": "localhost:sensors-nct6779-isa-*:temperature-*:value",
+          "type": "timeserie"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Mainboard & GPU temperature",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 32
+      },
+      "hiddenSeries": false,
       "id": 10,
       "legend": {
         "avg": false,
@@ -325,7 +418,7 @@
         {
           "rawQuery": true,
           "refId": "A",
-          "target": "localhost:sensors-applesmc-isa-0300:fanspeed-*:value",
+          "target": "localhost:sensors-*:fanspeed-*:value",
           "type": "timeserie"
         }
       ],
@@ -382,7 +475,7 @@
         "h": 8,
         "w": 24,
         "x": 0,
-        "y": 32
+        "y": 40
       },
       "hiddenSeries": false,
       "id": 8,
@@ -485,5 +578,5 @@
   "timezone": "",
   "title": "hardware monitor",
   "uid": "nGCLH8lWz",
-  "version": 7
+  "version": 1
 }
