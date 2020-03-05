@@ -1,0 +1,17 @@
+version: "2.3"
+services:
+  grafana-rrd-server:
+    image: mback2k/grafana-rrd-server
+    command: "-r /var/lib/collectd/rrd"
+    volumes:
+      - /var/lib/collectd/rrd:/var/lib/collectd/rrd:ro
+  grafana:
+    image: grafana/grafana
+    environment:
+      - GF_INSTALL_PLUGINS=grafana-simple-json-datasource
+    volumes:
+      - ./grafana.ini:/etc/grafana/grafana.ini:ro
+      - ./provisioning:/etc/grafana/provisioning:ro
+      - ./dashboards:/var/lib/grafana/dashboards:ro
+    ports:
+      - "3000:3000"
