@@ -338,13 +338,19 @@
           "refId": "C",
           "target": "localhost:sensors-BAT0-*:temperature-*:value",
           "type": "timeserie"
+        },
+        {
+          "rawQuery": true,
+          "refId": "D",
+          "target": "localhost:hddtemp:temperature-*:value",
+          "type": "timeserie"
         }
       ],
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Mainboard & GPU temperature",
+      "title": "Other temperatures",
       "tooltip": {
         "shared": true,
         "sort": 0,
