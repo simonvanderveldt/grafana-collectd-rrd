@@ -344,6 +344,12 @@
           "refId": "D",
           "target": "localhost:hddtemp:temperature-*:value",
           "type": "timeserie"
+        },
+        {
+          "rawQuery": true,
+          "refId": "E",
+          "target": "localhost:sensors-applesmc-isa-*:temperature-*:value",
+          "type": "timeserie"
         }
       ],
       "thresholds": [],
