@@ -350,6 +350,12 @@
           "refId": "E",
           "target": "localhost:sensors-applesmc-isa-*:temperature-*:value",
           "type": "timeserie"
+        },
+        {
+          "rawQuery": true,
+          "refId": "F",
+          "target": "localhost:curl_json-*:temperature-*:value",
+          "type": "timeserie"
         }
       ],
       "thresholds": [],
